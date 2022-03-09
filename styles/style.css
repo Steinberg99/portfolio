@@ -168,7 +168,7 @@ section h1 span:nth-of-type(3) {
 }
 
 .underline {
-  transition: 0.35s;
+  transition: 1.5s;
   background-repeat: no-repeat;
   background-size: 100% 0.4em;
   background-position: 0 85%;
