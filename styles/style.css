@@ -36,6 +36,7 @@ header nav ul {
 }
 
 #name {
+  transition: 0.35s;
   padding: 0.25em 0.5em;
   background: black;
   color: white;
@@ -50,6 +51,12 @@ header nav ul {
   background: white;
   color: black;
   border: 3px solid black;
+}
+
+#social_links {
+  width: 15.285em;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #social_links li,
@@ -68,6 +75,7 @@ header nav ul {
 }
 
 #social_links li:nth-of-type(1):hover {
+  transition: 0.35s;
   background: #e49600;
 }
 
@@ -77,10 +85,11 @@ header nav ul {
 
 #social_links li:nth-of-type(2) {
   border: 3px solid #86c5da;
-  margin: 0 1.5em;
+  margin-left: 1.5em;
 }
 
 #social_links li:nth-of-type(2):hover {
+  transition: 0.35s;
   background: #86c5da;
 }
 
@@ -88,19 +97,8 @@ header nav ul {
   color: #86c5da;
 }
 
-#social_links li:nth-of-type(3) {
-  border: 3px solid #cc2b36;
-}
-
-#social_links li:nth-of-type(3):hover {
-  background: #cc2b36;
-}
-
-#social_links li:nth-of-type(3) i {
-  color: #cc2b36;
-}
-
 #social_links li:hover i {
+  transition: 0.35s;
   color: white;
 }
 
@@ -120,6 +118,7 @@ header nav ul {
 }
 
 #page_links li {
+  transition: 0.35s;
   margin: 0 0.75em;
   padding: 0.25em 0.5em;
   color: black;
@@ -169,6 +168,7 @@ section h1 span:nth-of-type(3) {
 }
 
 .underline {
+  transition: 0.35s;
   background-repeat: no-repeat;
   background-size: 100% 0.4em;
   background-position: 0 85%;
@@ -184,7 +184,18 @@ section h1 span:nth-of-type(3) {
   text-align: center;
 }
 
+#intro h1 {
+  animation: fadeIn 1.5s;
+}
+
+#intro h1 span.underline {
+  animation: underlineLeftToRight 1.5s;
+}
+
 #intro a {
+  animation: fadeIn 1.5s;
+  transition: 0.35s;
+
   margin: 0 auto 0 auto;
   padding: 0.25em 0.5em;
   color: white;
@@ -243,6 +254,7 @@ section h1 span:nth-of-type(3) {
 }
 
 #projecten ul li {
+  transition: 0.35s;
   padding: 1em;
   border: 3px solid black;
 }
@@ -323,14 +335,16 @@ section h1 span:nth-of-type(3) {
   background-image: linear-gradient(#cc2b36, #cc2b36);
 }
 
+#project h2 span.underline {
+  animation: underlineLeftToRight 1.5s;
+}
+
 #project p {
   margin-bottom: 1em;
 }
 
-#project p strong {
-}
-
 #project a {
+  transition: 0.35s;
   color: black;
   padding: 0.25em 0.5em;
   border: 3px solid black;
@@ -339,16 +353,6 @@ section h1 span:nth-of-type(3) {
 #project a:hover {
   color: white;
   background: black;
-}
-
-#project #pokeapi_link_project {
-  color: #e49600;
-  border: none;
-  padding: 0;
-}
-
-#project #pokeapi_link_project:hover {
-  background: white;
 }
 
 #project ul {
@@ -444,6 +448,7 @@ footer ul li {
 }
 
 footer ul li a {
+  transition: 0.35s;
   color: black;
   padding: 0.25em 0.5em;
   border: 3px solid black;
@@ -649,5 +654,23 @@ footer ul li a:hover {
 
   #name {
     font-size: 1em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes underlineLeftToRight {
+  from {
+    background-size: 0% 0.4em;
+  }
+  to {
+    background-size: 100% 0.4em;
   }
 }
